@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import styles from "../styles/hamburguer.module.css";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
 function HamburguerButton() {
-  const [change, setChange] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
   const toggle = () => {
-    setChange(!change);
+    setIsOpened(!isOpened);
   };
   return (
-    <div
-      className={`${styles.wrapper} ${change ? styles.change : ""}`}
-      onClick={toggle}
-    >
-      <div className={styles.bar1}></div>
-      <div className={styles.bar2}></div>
-      <div className={styles.bar3}></div>
+    <div onClick={toggle} className="cursor-pointer">
+      {!isOpened ? (
+        <MenuIcon className="text-project w-10 h-10" />
+      ) : (
+        <XIcon className="text-project w-10 h-10" />
+      )}
     </div>
   );
 }

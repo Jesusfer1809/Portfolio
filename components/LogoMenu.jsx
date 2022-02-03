@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Logo() {
+function LogoMenu() {
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
+      width="200.000000pt"
+      height="50.000000pt"
       viewBox="0 0 1350.000000 420.000000"
       preserveAspectRatio="xMidYMid meet"
-      className={` fill-project hover:fill-gray_project transition-all duration-300 cursor-pointer w-48 h-12 md:w-64 md:h-16`}
+      className={` fill-gray_project hover:fill-white transition-all duration-300 cursor-pointer`}
     >
       <metadata>
         Created by potrace 1.10, written by Peter Selinger 2001-2011
@@ -241,4 +243,4 @@ c62 -40 28 -100 -67 -117 -61 -11 -69 -2 -69 69 0 41 4 65 13 69 20 9 98 -4
   );
 }
 
-export default Logo;
+export default LogoMenu;
