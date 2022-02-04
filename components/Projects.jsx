@@ -59,6 +59,11 @@ function Projects() {
               local Spotify app, by using Next Auth and Spotify API{" "}
             </p>
 
+            <p className="font-medium block mt-4">
+              Note: You need to have an Spotify app running in your device to
+              make it work
+            </p>
+
             <div className="flex flex-row md:flex-col space-x-8 md:space-x-0 md:space-y-4 xl:flex-row xl:space-x-8  xl:items-end mt-8">
               <Link href="https://spotify-clone-three-rho.vercel.app">
                 <a
