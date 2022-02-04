@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Menu from "../components/Menu";
+import AboutComponent from "../components/AboutComponent";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
@@ -37,6 +38,8 @@ export default function Home() {
             <Hero />
 
             <Projects />
+
+            <AboutComponent />
           </div>
         )}
       </AnimatePresence>

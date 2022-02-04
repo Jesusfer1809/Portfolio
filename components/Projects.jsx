@@ -18,19 +18,19 @@ function Projects() {
   const { ref: ref2, inView: inView2, animation: animation2 } = useNewView();
 
   return (
-    <div ref={ref1} className="px-8 pb-20">
+    <div ref={ref1} className="px-8 pb-20 my-16">
       <motion.div variants={stagger} initial="initial" animate="animate">
         <motion.span
           initial={{ y: 60, opacity: 0 }}
           animate={animation1}
-          className="text-sm text-gray_project tracking-widest"
+          className=" text-sm text-gray_project tracking-widest"
         >
           SEE MY LATEST JOB
         </motion.span>
         <motion.h2
           initial={{ y: 60, opacity: 0 }}
           animate={animation1}
-          className="text-5xl font-bold"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold"
         >
           Main Projects
         </motion.h2>

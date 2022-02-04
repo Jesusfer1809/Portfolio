@@ -44,16 +44,16 @@ function Hero() {
           variants={fadeInUp}
           className=" text-4xl sm:text-5xl md:text-6xl font-extrabold mt-2"
         >
-          Front-end web developer{" "}
+          Full-stack web developer{" "}
         </motion.h1>
 
         <motion.p
           variants={fadeInUp}
           className="block text-gray_project text-base sm:text-lg md:text-[1.375rem] font-medium mt-8 leading-relaxed"
         >
-          Totally self-taught. I'm a junior web dev with a passion for
-          technology and always learning new features. Let's work together and
-          make amazing webs that your users will love!
+          Over two years in the industry. I'm a junior software engineer with a
+          passion for technology and always learning new features. Let's work
+          together and make amazing websites that your users will love!
         </motion.p>
 
         <motion.div
