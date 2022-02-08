@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import scrollStyles from "../styles/scrollIcon.module.css";
+import { Link as ScrollLink } from "react-scroll";
 
 const fadeInUp = {
   initial: {
@@ -60,15 +61,31 @@ function Hero() {
           variants={fadeInUp}
           className="flex items-center space-x-4 sm:space-x-8 mt-8"
         >
-          <span className="font-semibold text-base sm:text-lg md:text-xl border-b-2 border-transparent hover:border-project cursor-pointer transition-all duration-300">
-            View my projects
-          </span>{" "}
+          <div className="font-semibold text-base sm:text-lg md:text-xl border-b-2 border-transparent hover:border-project cursor-pointer transition-all duration-300">
+            <ScrollLink
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={500}
+            >
+              View my projects
+            </ScrollLink>{" "}
+          </div>
           <span className="font-medium text-gray_project text-sm sm:text-base">
             or
           </span>{" "}
-          <span className="font-semibold text-base sm:text-lg md:text-xl border-b-2 border-transparent hover:border-project cursor-pointer transition-all duration-300">
-            Read about me
-          </span>
+          <div className="font-semibold text-base sm:text-lg md:text-xl border-b-2 border-transparent hover:border-project cursor-pointer transition-all duration-300">
+            <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={500}
+            >
+              Read about me
+            </ScrollLink>{" "}
+          </div>
         </motion.div>
       </motion.div>
 

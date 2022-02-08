@@ -7,6 +7,7 @@ module.exports = {
   darkMode: "media", // or 'class'
   theme: {
     screens: {
+      sz400: "400px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -968,5 +969,5 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

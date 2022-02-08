@@ -18,7 +18,7 @@ function Projects() {
   const { ref: ref2, inView: inView2, animation: animation2 } = useNewView();
 
   return (
-    <div ref={ref1} className="px-8 pb-20 my-16">
+    <div ref={ref1} className="px-8 pb-20 my-16" id="projects">
       <motion.div variants={stagger} initial="initial" animate="animate">
         <motion.span
           initial={{ y: 60, opacity: 0 }}

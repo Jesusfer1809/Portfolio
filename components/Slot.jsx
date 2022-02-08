@@ -14,9 +14,15 @@ function Slot({ name, items }) {
       <div className="p-4 text-2xl font-bold bg-project text-white flex justify-between relative">
         <span>{name}</span>
         {!isExpanded ? (
-          <ChevronRightIcon className="w-10 h-10" onClick={expand} />
+          <ChevronRightIcon
+            className="w-10 h-10 cursor-pointer"
+            onClick={expand}
+          />
         ) : (
-          <ChevronDownIcon className="w-10 h-10" onClick={expand} />
+          <ChevronDownIcon
+            className="w-10 h-10 cursor-pointer"
+            onClick={expand}
+          />
         )}
       </div>
 
