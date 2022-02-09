@@ -19,7 +19,7 @@ function contact() {
   const [loadingIsShowing, setLoadingIsShowing] = useState(true);
 
   useEffect(() => {
-    let timer1 = setTimeout(() => setLoadingIsShowing(false), 1500);
+    let timer1 = setTimeout(() => setLoadingIsShowing(false), 1000);
     return () => {
       clearTimeout(timer1);
     };

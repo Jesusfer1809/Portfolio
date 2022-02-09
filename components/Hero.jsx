@@ -52,9 +52,9 @@ function Hero() {
           variants={fadeInUp}
           className="block text-gray_project text-base sm:text-lg md:text-[1.375rem] font-medium mt-8 leading-relaxed"
         >
-          Over two years in the industry. I'm a junior software engineer with a
-          passion for technology and always learning new features. Let's work
-          together and make amazing websites that your users will love!
+          I'm a junior software engineer with a passion for technology and
+          always learning new features. Let's work together and make amazing
+          websites that your users will love!
         </motion.p>
 
         <motion.div
