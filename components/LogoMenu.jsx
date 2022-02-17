@@ -9,7 +9,7 @@ function LogoMenu() {
       height="50.000000pt"
       viewBox="0 0 1350.000000 420.000000"
       preserveAspectRatio="xMidYMid meet"
-      className={` fill-gray_project hover:fill-white transition-all duration-300 cursor-pointer`}
+      className={` fill-gray_project hover:fill-white transition-all duration-300 cursor-pointer w-48 h-12 md:w-64 md:h-16`}
     >
       <metadata>
         Created by potrace 1.10, written by Peter Selinger 2001-2011

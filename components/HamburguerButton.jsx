@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
-function HamburguerButton() {
-  const [isOpened, setIsOpened] = useState(false);
-  const toggle = () => {
-    setIsOpened(!isOpened);
-  };
+function HamburguerButton({ isWhite = false, isOpened }) {
   return (
-    <div onClick={toggle} className="cursor-pointer">
+    <div className="cursor-pointer">
       {!isOpened ? (
-        <MenuIcon className="text-project w-10 h-10" />
+        <MenuIcon
+          className={`${isWhite ? "text-white" : "text-project"} w-10 h-10`}
+        />
       ) : (
-        <XIcon className="text-project w-10 h-10" />
+        <XIcon
+          className={`${isWhite ? "text-white" : "text-project"} w-10 h-10`}
+        />
       )}
     </div>
   );

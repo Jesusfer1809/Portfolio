@@ -39,17 +39,17 @@ function Projects() {
       <motion.div
         ref={ref2}
         variants={stagger}
-        className="grid grid-cols-1  md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-x-16 lg:gap-y-20 mt-16"
+        className="grid grid-cols-1  gap-x-12 gap-y-24 lg:gap-x-16 md:gap-y-20 lg:gap-y-24 mt-16"
       >
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={animation2}
-          className=" grid grid-cols-1 w-full    "
+          className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
-          <div>
+          <div className="self-center">
             <img src="/spotify_project.jpg" alt="" className="h-full" />
           </div>
-          <div className="  bg-white h-full p-4 border-b-[1px]  border-project  ">
+          <div className="  bg-white h-full  md:p-8 p-0 sm:p-4 flex flex-col justify-center  ">
             <h3 className=" text-2xl lg:text-3xl font-semibold">
               Spotify Clone
             </h3>
@@ -91,12 +91,12 @@ function Projects() {
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={animation2}
-          className=" grid grid-cols-1 w-full    "
+          className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
-          <div>
+          <div className="self-center">
             <img src="/netflix_project.jpg" alt="" />
           </div>
-          <div className="  bg-white h-full p-4 border-b-[1px]  border-project  ">
+          <div className="  bg-white h-full  md:p-8 p-0 sm:p-4 flex flex-col justify-center  ">
             <h3 className="text-2xl lg:text-3xl font-semibold">
               Netflix Clone
             </h3>
@@ -133,12 +133,12 @@ function Projects() {
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={animation2}
-          className=" grid grid-cols-1 w-full    "
+          className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
-          <div>
+          <div className="self-center">
             <img src="/amazon_project.jpg" alt="" />
           </div>
-          <div className="  bg-white h-full p-4 border-b-[1px]  border-project  -mt-1 ">
+          <div className="  bg-white h-full  md:p-8 p-0 sm:p-4 flex flex-col justify-center  ">
             <h3 className="text-2xl lg:text-3xl font-semibold">Amazon Clone</h3>
 
             <p className="font-medium block mt-4">
@@ -173,12 +173,12 @@ function Projects() {
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={animation2}
-          className=" grid grid-cols-1 w-full    "
+          className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
-          <div>
+          <div className="self-center">
             <img src="/omnifood_project.jpg" alt="" />
           </div>
-          <div className="  bg-white h-full p-4 border-b-[1px]  border-project  ">
+          <div className="  bg-white h-full  md:p-8 p-0 sm:p-4 flex flex-col justify-center  ">
             <h3 className="text-2xl lg:text-3xl font-semibold">
               Omnifood project
             </h3>
