@@ -71,7 +71,7 @@ function Menu({ isOpened, setIsOpened }) {
           <motion.div
             variants={stagger}
             exit={{ opacity: 0, transition: { duration: 0.1 } }}
-            className="text-white mt-12 font-medium  flex flex-col self-center text-3xl sm:text-4xl md:text-5xl space-y-12"
+            className="text-white font-semibold mt-12  flex flex-col self-center text-3xl sm:text-4xl md:text-5xl space-y-12"
           >
             <Link href="/">
               <motion.div variants={fadeInLeft} className="cursor-pointer">
