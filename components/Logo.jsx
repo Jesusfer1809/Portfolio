@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 
-function Logo() {
+function Logo({ isOpened }) {
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1350.000000 420.000000"
       preserveAspectRatio="xMidYMid meet"
-      className={` fill-project hover:fill-gray_project transition-all duration-300 cursor-pointer w-48 h-12 md:w-64 md:h-16`}
+      className={` ${
+        !isOpened ? "fill-project" : "fill-white"
+      }  hover:fill-gray_project relative z-[1000] transition-all delay-300 duration-300 cursor-pointer w-48 h-12 md:w-64 md:h-16`}
     >
       <metadata>
         Created by potrace 1.10, written by Peter Selinger 2001-2011

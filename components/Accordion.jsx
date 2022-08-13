@@ -1,24 +1,16 @@
 import React from "react";
 import Slot from "./Slot";
-import { useNewView } from "../hooks/useNewView";
-import { motion } from "framer-motion";
 
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+import { motion } from "framer-motion";
+import { animScrollProps } from "../utils/anim";
 
 function Accordion() {
-  const { ref: ref1, inView: inView1, animation: animation1 } = useNewView();
-
   return (
     <motion.div
-      ref={ref1}
-      initial={{ y: 60, opacity: 0 }}
-      animate={animation1}
+      initial={animScrollProps.animInitial}
+      transition={animScrollProps.animTransition}
+      whileInView={animScrollProps.animWhileInView}
+      viewport={animScrollProps.animViewport}
       className=" w-full md:w-4/5 lg:w-3/4 flex flex-col border-[1px] border-project rounded-md overflow-hidden shadow-sm shadow-project"
     >
       <Slot

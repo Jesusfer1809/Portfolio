@@ -1,9 +1,18 @@
 import Link from "next/link";
 import React from "react";
 
+import { motion } from "framer-motion";
+import { animScrollProps } from "../utils/anim";
+
 function Footer() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 p-4 sm:p-8 mt-16">
+    <motion.div
+      initial={animScrollProps.animInitial}
+      transition={animScrollProps.animTransition}
+      whileInView={animScrollProps.animWhileInView}
+      viewport={animScrollProps.animViewport}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 p-4 sm:p-8 mt-16"
+    >
       <div className="md:col-span-2 lg:w-3/5">
         <h3 className="font-semibold text-lg sm:text-xl md:text-2xl block">
           Contact information
@@ -67,7 +76,7 @@ function Footer() {
         <p>&copy; Jesus Rondon.</p>
         <p>Made with 🖤 in Lima, Peru</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

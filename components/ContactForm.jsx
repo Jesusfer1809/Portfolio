@@ -1,40 +1,26 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-
-import { useNewView } from "../hooks/useNewView";
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+import { motion } from "framer-motion";
 
 function ContactForm() {
-  const { ref: ref1, inView: inView1, animation: animation1 } = useNewView();
-
   return (
     <motion.div
-      ref={ref1}
-      initial={{ y: 60, opacity: 0 }}
-      animate={animation1}
+      initial={{ y: 20, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.6,
+          ease: "easeInOut",
+        },
+      }}
       className="px-4 sm:px-8 py-24 border-b-[1px] border-gray_project grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20"
     >
       <div className="flex flex-col space-y-8">
         <div>
-          <span
-            initial={{ y: 60, opacity: 0 }}
-            animate={animation1}
-            className=" text-sm md:text-lg  text-gray_project tracking-[4px] md:tracking-[7px] "
-          >
+          <span className=" text-sm md:text-lg  text-gray_project tracking-[4px] md:tracking-[7px] ">
             CONTACT
           </span>
-          <h2
-            initial={{ y: 60, opacity: 0 }}
-            animate={animation1}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold"
-          >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Get in touch - Let's work together
           </h2>
         </div>
@@ -126,10 +112,13 @@ function ContactForm() {
             />
           </div>
 
-          <div>
+          <div classname="flex flex-col">
+            <p className="text-red-600 inline-block font-medium">
+              This form doesn't work!! It's just for presentation purposes
+            </p>
             <button
               onClick={(e) => e.preventDefault()}
-              className="font-semibold px-1 py-2"
+              className="font-semibold px-1 py-2 block"
             >
               Send message
             </button>

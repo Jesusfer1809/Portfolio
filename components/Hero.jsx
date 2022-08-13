@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const fadeInUp = {
   initial: {
-    y: 60,
+    y: 20,
     opacity: 0,
   },
   animate: {
@@ -13,7 +13,7 @@ const fadeInUp = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: [0.6, -0.05, 0.01, 0.99],
+      ease: "easeInOut",
     },
   },
 };
@@ -90,7 +90,16 @@ function Hero() {
       </motion.div>
 
       <motion.div
-        variants={fadeInUp}
+        initial={{ y: 60, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.6,
+            delay: 0.6,
+            ease: [0.6, -0.05, 0.01, 0.99],
+          },
+        }}
         className="absolute right-0 bottom-4 sm:bottom-8 md:bottom-12 left-0 m-auto w-8 h-14"
       >
         <div className={scrollStyles.mousey}>

@@ -48,11 +48,29 @@ function Slot({ name, items }) {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 box-border  items-center gap-y-8  text-lg relative"
           >
             {items?.map((item) => (
-              <motion.div className=" p-6 pl-8 flex items-center space-x-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.2,
+                    delay: 0.3,
+                  },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0,
+                  },
+                }}
+                className=" p-6 pl-8 flex items-center space-x-2"
+              >
                 {item.source ? (
                   <img loading="lazy" src={item.source} className="h-10 w-10" />
                 ) : (
-                  <div className="w-10 h-10"></div>
+                  <div className="w-10 h-10 flex items-center justify-center text-xl">
+                    &bull;
+                  </div>
                 )}
                 <span>{item.name}</span>
               </motion.div>

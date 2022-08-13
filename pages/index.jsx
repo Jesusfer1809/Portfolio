@@ -14,7 +14,7 @@ export default function Home() {
   const [loadingIsShowing, setLoadingIsShowing] = useState(true);
 
   useEffect(() => {
-    let timer1 = setTimeout(() => setLoadingIsShowing(false), 1000);
+    let timer1 = setTimeout(() => setLoadingIsShowing(false), 1300);
     return () => {
       clearTimeout(timer1);
     };

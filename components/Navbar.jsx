@@ -14,15 +14,19 @@ function Navbar() {
     >
       <Link href="/">
         <div>
-          <Logo />
+          <Logo isOpened={isOpened} />
         </div>
       </Link>
 
       <div
-        className={`flex items-center space-x-4 text-project cursor-pointer`}
-        onClick={() => setIsOpened(true)}
+        className={`flex items-center space-x-4 ${
+          isOpened ? "text-white" : "text-project"
+        } cursor-pointer relative z-[1000] transition-all duration-1000`}
+        onClick={() => setIsOpened(!isOpened)}
       >
-        <span className="font-semibold text-sm sm:text-base">MENU</span>
+        <span className="font-semibold text-sm sm:text-base z">
+          {!isOpened ? "MENU" : "CLOSE"}
+        </span>
         <HamburguerButton isOpened={isOpened} />
       </div>
 

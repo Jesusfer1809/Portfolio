@@ -1,49 +1,32 @@
-import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useNewView } from "../hooks/useNewView";
+import React from "react";
+import { motion } from "framer-motion";
 
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+import { animScrollProps } from "../utils/anim";
 
 function Projects() {
-  const { ref: ref1, inView: inView1, animation: animation1 } = useNewView();
-  const { ref: ref2, inView: inView2, animation: animation2 } = useNewView();
-
   return (
-    <div ref={ref1} className="px-8 pb-20 my-16" id="projects">
-      <motion.div variants={stagger} initial="initial" animate="animate">
-        <motion.span
-          initial={{ y: 60, opacity: 0 }}
-          animate={animation1}
-          className=" text-sm text-gray_project tracking-widest"
-        >
+    <div className="px-8 pb-20 my-16" id="projects">
+      <motion.div
+        initial={animScrollProps.animInitial}
+        transition={animScrollProps.animTransition}
+        whileInView={animScrollProps.animWhileInView}
+        viewport={animScrollProps.animViewport}
+      >
+        <motion.span className=" text-sm text-gray_project tracking-widest">
           SEE MY LATEST JOB
         </motion.span>
-        <motion.h2
-          initial={{ y: 60, opacity: 0 }}
-          animate={animation1}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold"
-        >
+        <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
           Main Projects
         </motion.h2>
       </motion.div>
 
-      <motion.div
-        ref={ref2}
-        variants={stagger}
-        className="grid grid-cols-1  gap-x-12 gap-y-24 lg:gap-x-16 md:gap-y-20 lg:gap-y-24 mt-16"
-      >
+      <motion.div className="grid grid-cols-1  gap-x-12 gap-y-24 lg:gap-x-16 md:gap-y-20 lg:gap-y-24 mt-16">
         <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          animate={animation2}
+          initial={animScrollProps.animInitial}
+          transition={animScrollProps.animTransition}
+          whileInView={animScrollProps.animWhileInView}
+          viewport={animScrollProps.animViewport}
           className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
           <div className="self-center">
@@ -89,8 +72,10 @@ function Projects() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          animate={animation2}
+          initial={animScrollProps.animInitial}
+          transition={animScrollProps.animTransition}
+          whileInView={animScrollProps.animWhileInView}
+          viewport={animScrollProps.animViewport}
           className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
           <div className="self-center">
@@ -131,8 +116,10 @@ function Projects() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          animate={animation2}
+          initial={animScrollProps.animInitial}
+          transition={animScrollProps.animTransition}
+          whileInView={animScrollProps.animWhileInView}
+          viewport={animScrollProps.animViewport}
           className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
           <div className="self-center">
@@ -171,8 +158,10 @@ function Projects() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          animate={animation2}
+          initial={animScrollProps.animInitial}
+          transition={animScrollProps.animTransition}
+          whileInView={animScrollProps.animWhileInView}
+          viewport={animScrollProps.animViewport}
           className=" grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full   "
         >
           <div className="self-center">
