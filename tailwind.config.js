@@ -358,6 +358,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      roboto: ["'Roboto', sans-serif"],
       helvetica_now: ["Helvetica Now Display", "sans-serif", "ui-sans-serif"],
       sans: [
         "ui-sans-serif",

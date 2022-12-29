@@ -1,12 +1,12 @@
 import axios from "axios";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import Navbar from "../components/Navbar";
-import Loading from "../components/Loading";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import Navbar from "components/sections/Navbar";
+import Loading from "components/Loading";
+import ContactForm from "components/pieces/ContactForm";
+import Footer from "components/sections/Footer";
 
-import mapBg from "../public/amazon_project.jpg";
+import mapBg from "public/amazon_project.jpg";
 
 const MapWrapper = dynamic(() => import("../components/MapWrapper"), {
   ssr: false,
@@ -29,7 +29,7 @@ function contact() {
     <motion.div
       initial="initial"
       animate="animate"
-      className="font-helvetica_now text-project relative selection:bg-gray_project selection:text-white"
+      className="font-roboto text-project relative selection:bg-gray_project selection:text-white"
     >
       <Head>
         <title>Portfolio | Jesus Rondon</title>

@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Projects from "../components/Projects";
-import Loading from "../components/Loading";
-import AboutComponent from "../components/AboutComponent";
-import ContactMe from "../components/ContactMe";
-import Footer from "../components/Footer";
+import Navbar from "components/sections/Navbar";
+import Hero from "components/sections/Hero";
+import Projects from "components/sections/Projects";
+import Loading from "components/pieces/Loading";
+import AboutComponent from "components/sections/AboutComponent";
+import ContactMe from "components/sections/ContactMe";
+import Footer from "components/sections/Footer";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,18 +25,18 @@ export default function Home() {
       initial="initial"
       animate="animate"
       key="index"
-      className=" font-helvetica_now text-project relative selection:bg-gray_project selection:text-white"
+      className=" font-roboto text-white relative bg-slate-800"
     >
       <Head>
         <title>Portfolio | Jesus Rondon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {loadingIsShowing ? (
           <Loading key="uwu" sub="WELCOME" title="Wait a bit..." />
         ) : (
-          <motion.div>
+          <motion.div className="px-4 md:px-10 lg:px-20">
             <Navbar />
 
             <Hero />
