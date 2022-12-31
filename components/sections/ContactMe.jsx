@@ -12,15 +12,15 @@ function ContactMe() {
       transition={animScrollProps.animTransition}
       whileInView={animScrollProps.animWhileInView}
       viewport={animScrollProps.animViewport}
-      className=" p-8 pt-0  md:p-16 md:pt-8  flex items-center  md:justify-center"
+      className=" my-44  flex items-center  md:justify-center"
     >
-      <motion.div className="flex flex-col md:items-center">
-        <span className=" text-xs sm:text-base text-gray_project block mb-4 tracking-[3px] sm:tracking-[7px]">
-          NEED A DEVELOPER?
+      <motion.div className="flex flex-col">
+        <span className=" text-xs sm:text-base text-indigo-400 block mb-4 tracking-[3px] sm:tracking-[7px]">
+          WANT TO SAY HI?
         </span>
         <Link href="/contact">
-          <span className=" text-4xl sm:text-5xl md:text-6xl font-bold block border-b-4 pb-2 border-transparent hover:border-project cursor-pointer transition-all duration-300">
-            Let's work together &rarr;
+          <span className=" text-4xl sm:text-5xl md:text-6xl font-bold block border-b-4 pb-2 border-indigo-400 hover:text-indigo-500 hover:border-indigo-500 cursor-pointer transition-all duration-300">
+            Drop me a line &rarr;
           </span>
         </Link>
       </motion.div>

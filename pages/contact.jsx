@@ -2,7 +2,7 @@ import axios from "axios";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "components/sections/Navbar";
-import Loading from "components/Loading";
+import Loading from "components/pieces/Loading";
 import ContactForm from "components/pieces/ContactForm";
 import Footer from "components/sections/Footer";
 

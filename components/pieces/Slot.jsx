@@ -26,7 +26,7 @@ function Slot({ name, items }) {
         )}
       </div>
 
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {isExpanded && (
           <motion.div
             key={name}

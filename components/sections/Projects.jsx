@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { animScrollProps } from "utils/anim";
 import ProjectShowcase from "components/pieces/ProjectShowcase";
+import { projectsData } from "utils/projectsData";
 
 function Projects() {
   return (
@@ -22,9 +23,13 @@ function Projects() {
       </motion.div>
 
       <motion.div className=" mt-20 flex flex-col gap-y-52">
-        <ProjectShowcase position="left" />
-
-        <ProjectShowcase position="right" />
+        {projectsData.map((project, index) => (
+          <ProjectShowcase
+            key={project.title}
+            project={project}
+            position={index % 2 === 0 ? "left" : "right"}
+          />
+        ))}
       </motion.div>
     </div>
   );
