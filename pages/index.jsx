@@ -39,13 +39,15 @@ export default function Home() {
           <motion.div className="px-4 md:px-10 lg:px-20">
             <Navbar />
 
-            <Hero />
+            <main>
+              <Hero />
 
-            <Projects />
+              <Projects />
 
-            <AboutComponent />
+              <AboutComponent />
 
-            <ContactMe />
+              <ContactMe />
+            </main>
 
             <Footer />
           </motion.div>

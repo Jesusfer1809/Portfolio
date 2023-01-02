@@ -42,7 +42,7 @@ function Footer() {
 
         <div className="shrink-0">
           <h3 className="font-semibold text-lg sm:text-xl md:text-2xl block">
-            Follow me on -
+            My social media -
           </h3>
           <div className=" text-lg font-medium mt-4 flex gap-x-8 gap-y-4 flex-col">
             <div>

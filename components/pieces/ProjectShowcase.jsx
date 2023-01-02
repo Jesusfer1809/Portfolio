@@ -118,7 +118,7 @@ function ProjectShowcase({ project, position }) {
         <motion.div className="relative w-full lg:w-1/2 min-h-[36rem] lg:min-h-0">
           <motion.div
             style={{ y }}
-            className="w-full sm:w-4/5 md:w-3/5 sm:left-12 md:left-44  lg:w-full xl:w-5/6 absolute top-0 left-0 lg:left-4 xl:left-20"
+            className="w-full sz500:w-4/5 md:w-3/5 sz500:left-12 md:left-44  lg:w-full xl:w-5/6 absolute top-0 left-0 lg:left-4 xl:left-20"
           >
             <Image
               width={1000}
@@ -130,7 +130,7 @@ function ProjectShowcase({ project, position }) {
 
           <motion.div
             style={{ y: yCell }}
-            className="w-1/3 sm:w-1/4 md:w-1/5  sm:right-4 md:right-20 lg:right-4 lg:w-[10rem] absolute top-1/4 right-0 xl:right-8"
+            className="w-1/3 sz500:w-1/4 md:w-1/5  sz500:right-4 md:right-20 lg:right-4 lg:w-[10rem] absolute top-1/4 right-0 xl:right-8"
           >
             <Image
               width={50}
@@ -144,7 +144,7 @@ function ProjectShowcase({ project, position }) {
         <motion.div className="relative w-full lg:w-1/2 min-h-[36rem] lg:min-h-0 lg:hidden">
           <motion.div
             style={{ y }}
-            className="w-full sm:w-4/5 md:w-3/5 sm:left-12 md:left-44  lg:w-full xl:w-5/6 absolute top-0 left-0 lg:left-4 xl:left-20"
+            className="w-full sz500:w-4/5 md:w-3/5 sz500:left-12 md:left-44  lg:w-full xl:w-5/6 absolute top-0 left-0 lg:left-4 xl:left-20"
           >
             <Image
               width={1000}
@@ -156,7 +156,7 @@ function ProjectShowcase({ project, position }) {
 
           <motion.div
             style={{ y: yCell }}
-            className="w-1/3 sm:w-1/4 md:w-1/5  sm:right-4 md:right-20 lg:right-4 lg:w-[10rem] absolute top-1/4 right-0 xl:right-8"
+            className="w-1/3 sz500:w-1/4 md:w-1/5  sz500:right-4 md:right-20 lg:right-4 lg:w-[10rem] absolute top-1/4 right-0 xl:right-8"
           >
             <Image
               width={50}
