@@ -14,14 +14,14 @@ function Map() {
   return (
     <MapContainer
       center={center}
-      zoom={5}
+      zoom={13}
       scrollWheelZoom={false}
       style={{ width: "100%", height: "100%" }}
       whenCreated={(map) => setMap(map)}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url={`https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token=${ACCESS_TOKEN}`}
+        url={`https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token=${process.env.NEXT_PUBLIC_LEAFLET_KEY}`}
       />
       <Marker position={center}>
         <Popup>

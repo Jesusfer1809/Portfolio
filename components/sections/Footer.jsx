@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 import { motion } from "framer-motion";
-import { animScrollProps } from "utils/anim";
+import { animScrollProps, fadeVariant } from "utils/anim";
 
 import {
   AiOutlineGithub,
@@ -13,10 +13,10 @@ import {
 function Footer() {
   return (
     <motion.div
-      initial={animScrollProps.animInitial}
-      transition={animScrollProps.animTransition}
-      whileInView={animScrollProps.animWhileInView}
-      viewport={animScrollProps.animViewport}
+      variants={fadeVariant()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
       className="py-8 sm:py-12 mt-16 border-t border-indigo-900"
     >
       <div className="flex flex-col sm:flex-row sm:justify-between gap-x-20 md:gap-x-28 lg:gap-x-40 gap-y-16">

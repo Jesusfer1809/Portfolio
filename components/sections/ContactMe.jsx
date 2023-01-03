@@ -1,17 +1,18 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import { animScrollProps } from "utils/anim";
+import { animScrollProps, fadeVariant } from "utils/anim";
 
 import Link from "next/link";
 
 function ContactMe() {
   return (
     <motion.div
-      initial={animScrollProps.animInitial}
-      transition={animScrollProps.animTransition}
-      whileInView={animScrollProps.animWhileInView}
-      viewport={animScrollProps.animViewport}
+      variants={fadeVariant()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      id="contact"
       className=" my-44  flex items-center  md:justify-center"
     >
       <motion.div className="flex flex-col">

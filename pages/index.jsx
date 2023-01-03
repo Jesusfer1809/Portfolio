@@ -11,48 +11,32 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
-  const [loadingIsShowing, setLoadingIsShowing] = useState(true);
-
-  useEffect(() => {
-    let timer1 = setTimeout(() => setLoadingIsShowing(false), 1300);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
-
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       key="index"
-      className=" font-roboto text-white relative bg-slate-800"
     >
       <Head>
         <title>Portfolio | Jesus Rondon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AnimatePresence mode="wait">
-        {loadingIsShowing ? (
-          <Loading key="uwu" sub="WELCOME" title="Wait a bit..." />
-        ) : (
-          <motion.div className="px-4 md:px-10 lg:px-20">
-            <Navbar />
+      <Navbar />
+      <div className="px-4 md:px-10 lg:px-20 ">
+        <main>
+          <Hero />
 
-            <main>
-              <Hero />
+          <Projects />
 
-              <Projects />
+          <AboutComponent />
 
-              <AboutComponent />
+          <ContactMe />
+        </main>
 
-              <ContactMe />
-            </main>
-
-            <Footer />
-          </motion.div>
-        )}
-      </AnimatePresence>
+        <Footer />
+      </div>
     </motion.div>
   );
 }

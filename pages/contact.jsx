@@ -6,47 +6,42 @@ import Loading from "components/pieces/Loading";
 import ContactForm from "components/pieces/ContactForm";
 import Footer from "components/sections/Footer";
 
-// const MapWrapper = dynamic(() => import("components/pieces/MapWrapper"), {
-//   ssr: false,
-// });
 import { useEffect, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 
+const MapWrapper = dynamic(() => import("components/pieces/MapWrapper"), {
+  ssr: false,
+});
+
 function contact() {
-  const [loadingIsShowing, setLoadingIsShowing] = useState(true);
-
-  useEffect(() => {
-    let timer1 = setTimeout(() => setLoadingIsShowing(false), 1300);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
-
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      key="contact"
       className="font-roboto text-white relative bg-slate-800"
     >
       <Head>
         <title>Portfolio | Jesus Rondon</title>
         <link rel="icon" href="/favicon.ico" />
 
-        {/* <link
+        <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""
-        /> */}
+        />
       </Head>
 
+      <Navbar />
       <div className="px-4 md:px-10 lg:px-20">
-        <Navbar />
-
         {/* <MapWrapper /> */}
-        <main className=" pt-36 lg:pt-40">
+        <main className=" pt-20">
           <ContactForm />
+
+          <MapWrapper />
         </main>
 
         <Footer />

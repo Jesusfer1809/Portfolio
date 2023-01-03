@@ -2,7 +2,7 @@ import React from "react";
 import Accordion from "components/pieces/Accordion";
 
 import { motion } from "framer-motion";
-import { animScrollProps } from "utils/anim";
+import { animScrollProps, fadeVariant, staggerContainer } from "utils/anim";
 
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { DiCss3, DiReact, DiSass } from "react-icons/di";
@@ -23,13 +23,15 @@ import { FaGitAlt } from "react-icons/fa";
 
 function AboutComponent() {
   return (
-    <div className=" mt-16" id="about">
-      <motion.div
-        initial={animScrollProps.animInitial}
-        transition={animScrollProps.animTransition}
-        whileInView={animScrollProps.animWhileInView}
-        viewport={animScrollProps.animViewport}
-      >
+    <motion.div
+      variants={staggerContainer(0.2, 0)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className=" mt-16"
+      id="about"
+    >
+      <motion.div variants={fadeVariant()}>
         <motion.span className="text-sm text-indigo-400 tracking-widest">
           NICE TO MEET YOU!
         </motion.span>
@@ -39,10 +41,7 @@ function AboutComponent() {
       </motion.div>
 
       <motion.div
-        initial={animScrollProps.animInitial}
-        transition={animScrollProps.animTransition}
-        whileInView={animScrollProps.animWhileInView}
-        viewport={animScrollProps.animViewport}
+        variants={fadeVariant()}
         className="mt-12 leading-relaxed  sm:text-lg "
       >
         <motion.p className="block text-slate-200">
@@ -60,7 +59,10 @@ function AboutComponent() {
         </motion.p>
       </motion.div>
 
-      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5  lg:grid-cols-6 xl:grid-cols-7 md:px-4 gap-y-16  mt-20">
+      <motion.div
+        variants={fadeVariant()}
+        className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5  lg:grid-cols-6 xl:grid-cols-7 md:px-4 gap-y-16  mt-20"
+      >
         <div className="flex flex-col items-center gap-y-2">
           <AiFillHtml5 className="text-5xl xl:text-6xl text-slate-400" />
           <span className="text-sm xl:text-base  font-medium ">HTML5</span>
@@ -139,8 +141,8 @@ function AboutComponent() {
           <SiFirebase className="text-5xl xl:text-6xl text-slate-400" />
           <span className="text-sm xl:text-base font-medium ">Firebase</span>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

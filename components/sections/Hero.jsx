@@ -9,61 +9,41 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import Link from "next/link";
-
-const fadeInUp = {
-  initial: {
-    y: 20,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+import { fadeVariant, staggerContainer } from "utils/anim";
 
 function Hero() {
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      className="h-screen relative flex flex-col  justify-center "
-    >
-      <motion.div variants={stagger} className=" w-full lg:w-4/5 xl:w-3/5 ">
+    <div className="h-screen relative flex flex-col  justify-center -mt-16 ">
+      <motion.div
+        variants={staggerContainer(0.1, 0)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className=" w-full lg:w-4/5 xl:w-3/5 "
+      >
         <motion.span
-          variants={fadeInUp}
+          variants={fadeVariant()}
           className="text-indigo-400 tracking-[1px] text-sm sm:text-base"
         >
           Hi, I'm
         </motion.span>
 
         <motion.h1
-          variants={fadeInUp}
+          variants={fadeVariant()}
           className=" text-4xl sm:text-5xl md:text-6xl font-bold mt-3 tracking-[1px]"
         >
           Jesus Rondon{" "}
         </motion.h1>
 
         <motion.h2
-          variants={fadeInUp}
+          variants={fadeVariant()}
           className=" text-3xl text-slate-200 sm:text-4xl md:text-4xl font-bold mt-4 tracking-[1px]"
         >
           Full-stack web developer{" "}
         </motion.h2>
 
         <motion.p
-          variants={fadeInUp}
+          variants={fadeVariant()}
           className="block text-slate-300 text-base sm:text-lg md:text-lg font-medium mt-8 leading-relaxed"
         >
           I'm a self-taught developer placed in Peru.
@@ -73,7 +53,7 @@ function Hero() {
         </motion.p>
 
         <motion.div
-          variants={fadeInUp}
+          variants={fadeVariant()}
           className="flex items-center space-x-4 sm:space-x-8 mt-8"
         >
           <div className="font-semibold pb-1 text-base sm:text-lg md:text-xl border-b-2 border-indigo-400 hover:border-indigo-400 hover:text-indigo-400 cursor-pointer transition-all duration-300">
@@ -81,8 +61,8 @@ function Hero() {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-150}
-              duration={500}
+              offset={-200}
+              duration={1500}
             >
               See my projects
             </ScrollLink>{" "}
@@ -95,8 +75,8 @@ function Hero() {
               to="about"
               spy={true}
               smooth={true}
-              offset={-150}
-              duration={500}
+              offset={-200}
+              duration={1500}
             >
               Read about me
             </ScrollLink>{" "}
@@ -139,7 +119,7 @@ function Hero() {
           </a>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

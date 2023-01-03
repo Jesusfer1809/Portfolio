@@ -8,7 +8,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { animScrollProps } from "utils/anim";
+import { animScrollProps, fadeVariant } from "utils/anim";
 
 function ProjectShowcase({ project, position }) {
   let ref = useRef(null);
@@ -22,10 +22,10 @@ function ProjectShowcase({ project, position }) {
 
   return (
     <motion.div
-      initial={animScrollProps.animInitial}
-      transition={animScrollProps.animTransition}
-      whileInView={animScrollProps.animWhileInView}
-      viewport={animScrollProps.animViewport}
+      variants={fadeVariant()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
       ref={ref}
       className="flex flex-col lg:flex-row  relative min-h-screen  "
     >
