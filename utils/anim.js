@@ -20,6 +20,21 @@ export const fadeVariant = () => ({
   },
 });
 
+export const fadeInLeftVariant = () => ({
+  hidden: {
+    x: 100,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+});
+
 export const staggerContainer = (staggerChildren, delayChildren) => ({
   hidden: {},
   show: {

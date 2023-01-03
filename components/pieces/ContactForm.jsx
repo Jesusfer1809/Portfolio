@@ -92,46 +92,46 @@ function ContactForm() {
           action="#"
           className="flex flex-col gap-y-16 lg:gap-y-20 mt-8 w-full sm:w-4/5 md:w-full self-center"
         >
-          <fieldset className="flex flex-col gap-y-3 ">
+          <fieldset className="flex flex-col gap-y-4 ">
             <label
               htmlFor="name"
-              className="text-slate-400  font-medium inline-block  "
+              className="text-slate-500  font-medium inline-block  "
             >
               Your Name
             </label>
             <input
               type="text"
-              className="py-3 px-2 focus:outline-none  border-b-2 border-indigo-400 focus:border-indigo-600 bg-slate-900 rounded-md transition-[border]"
+              className="py-4 px-2 focus:outline-none placeholder:text-slate-200   border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
               id="name"
               placeholder="What's your name?"
             />
           </fieldset>
 
-          <fieldset className="flex flex-col gap-y-3">
+          <fieldset className="flex flex-col gap-y-4">
             <label
               htmlFor="email"
-              className="text-slate-400  font-medium inline-block "
+              className="text-slate-500  font-medium inline-block "
             >
               Your Email
             </label>
             <input
               type="text"
-              className="py-3 px-2 focus:outline-none  border-b-2 border-indigo-400 focus:border-indigo-600 bg-slate-900 rounded-md transition-[border]"
+              className="py-4 px-2 focus:outline-none placeholder:text-slate-200  border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
               id="email"
               placeholder="What's your email address?"
             />
           </fieldset>
 
-          <fieldset className="flex flex-col gap-y-3">
+          <fieldset className="flex flex-col gap-y-4">
             <label
               htmlFor="service"
-              className="text-slate-400  font-medium inline-block "
+              className="text-slate-500  font-medium inline-block "
             >
               Subject
             </label>
             <select
               id="subject"
-              className="py-3 px-2 focus:outline-none  border-b-2 border-indigo-400 focus:border-indigo-600 bg-slate-900 rounded-md transition-[border]"
+              className="py-4 px-2 focus:outline-none placeholder:text-slate-200  border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
             >
               <option value="interested" disabled>
                 What are you interested in?
@@ -142,15 +142,15 @@ function ContactForm() {
             </select>
           </fieldset>
 
-          <fieldset className="flex flex-col gap-y-3">
+          <fieldset className="flex flex-col gap-y-4">
             <label
               htmlFor="message"
-              className="text-slate-400  font-medium inline-block "
+              className="text-slate-500  font-medium inline-block "
             >
               Message
             </label>
             <textarea
-              className="pt-3 pb-6 px-2 focus:outline-none  border-b-2 border-t-2 border-indigo-400 focus:border-indigo-600 bg-slate-900 rounded-md transition-[border]"
+              className="pt-3 pb-6 px-2 focus:outline-none placeholder:text-slate-200  border-b-2 border-t-2 border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
               id="message"
               placeholder="What's your message?"
             />

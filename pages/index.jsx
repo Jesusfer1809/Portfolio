@@ -9,6 +9,7 @@ import Footer from "components/sections/Footer";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Menu from "components/pieces/Menu";
 
 export default function Home() {
   return (
