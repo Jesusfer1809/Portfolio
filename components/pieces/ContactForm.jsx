@@ -1,11 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import { BsPinMapFill } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { IoPhonePortraitOutline } from "react-icons/io5";
+import { sendContactForm } from "utils/api";
 
 function ContactForm() {
+  const [mail, setMail] = useState({
+    name: "",
+    email: "",
+    subject: "I need help with my project!",
+    message: "",
+  });
+
+  const [isTouched, setIsTouched] = useState({
+    name: false,
+    email: false,
+    subject: false,
+    message: false,
+  });
+
+  const resetForm = () => {
+    setMail({
+      name: "",
+      email: "",
+      subject: "I need help with my project!",
+      message: "",
+    });
+
+    setIsTouched({
+      name: false,
+      email: false,
+      subject: false,
+      message: false,
+    });
+  };
+
+  const handleBlur = (e) => {
+    setIsTouched({
+      ...isTouched,
+      [e.target.name]: true,
+    });
+  };
+
+  const handleChange = (e) => {
+    setMail({
+      ...mail,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(mail);
+      await sendContactForm(mail);
+      resetForm();
+    } catch (err) {
+      console.error("ERROR", err);
+    }
+  };
+
   return (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
@@ -89,7 +145,7 @@ function ContactForm() {
         </div>
 
         <form
-          action="#"
+          onSubmit={handleSubmit}
           className="flex flex-col gap-y-16 lg:gap-y-20 mt-8 w-full sm:w-4/5 md:w-full self-center"
         >
           <fieldset className="flex flex-col gap-y-4 ">
@@ -97,13 +153,21 @@ function ContactForm() {
               htmlFor="name"
               className="text-slate-500  font-medium inline-block  "
             >
-              Your Name
+              Your Name *
             </label>
             <input
               type="text"
-              className="py-4 px-2 focus:outline-none placeholder:text-slate-200   border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
+              className={`py-4 px-2 ${
+                isTouched.name &&
+                "invalid:border-red-500 focus:invalid:border-red-600"
+              } focus:outline-none placeholder:text-slate-200   border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors`}
               id="name"
               placeholder="What's your name?"
+              name="name"
+              value={mail.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              required
             />
           </fieldset>
 
@@ -112,13 +176,21 @@ function ContactForm() {
               htmlFor="email"
               className="text-slate-500  font-medium inline-block "
             >
-              Your Email
+              Your Email *
             </label>
             <input
-              type="text"
-              className="py-4 px-2 focus:outline-none placeholder:text-slate-200  border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
+              type="email"
+              className={`py-4 px-2 ${
+                isTouched.email &&
+                "invalid:border-red-500 focus:invalid:border-red-600"
+              }  focus:outline-none placeholder:text-slate-200  border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors`}
               id="email"
               placeholder="What's your email address?"
+              name="email"
+              value={mail.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              required
             />
           </fieldset>
 
@@ -127,18 +199,32 @@ function ContactForm() {
               htmlFor="service"
               className="text-slate-500  font-medium inline-block "
             >
-              Subject
+              Subject *
             </label>
             <select
               id="subject"
-              className="py-4 px-2 focus:outline-none placeholder:text-slate-200  border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
+              className={`py-4 px-2 ${
+                isTouched.subject &&
+                "invalid:border-red-500 focus:invalid:border-red-600"
+              } focus:outline-none placeholder:text-slate-200  border-b-2  border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors`}
+              name="subject"
+              value={mail.subject}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              required
             >
               <option value="interested" disabled>
                 What are you interested in?
               </option>
-              <option value="help">Need help with a project </option>
-              <option value="hire">Want to hire me </option>
-              <option value="hi">Just wanted to say hi!</option>
+              <option value="I need help with my project!">
+                Need help with a project{" "}
+              </option>
+              <option value="Are you available? I'd like to hire you!">
+                Want to hire me{" "}
+              </option>
+              <option value="I just want to say hi! :D">
+                Just wanted to say hi!
+              </option>
             </select>
           </fieldset>
 
@@ -147,20 +233,25 @@ function ContactForm() {
               htmlFor="message"
               className="text-slate-500  font-medium inline-block "
             >
-              Message
+              Message *
             </label>
             <textarea
-              className="pt-3 pb-6 px-2 focus:outline-none placeholder:text-slate-200  border-b-2 border-t-2 border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors"
+              className={`pt-3 pb-6 px-2 focus:outline-none ${
+                isTouched.message &&
+                "invalid:border-red-500 focus:invalid:border-red-600"
+              } placeholder:text-slate-200  border-b-2 border-t-2 border-indigo-400 focus:border-indigo-600 bg-slate-800 focus:bg-slate-900 rounded-md transition-colors`}
               id="message"
               placeholder="What's your message?"
+              name="message"
+              value={mail.message}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              required
             />
           </fieldset>
 
           <fieldset className="flex flex-col">
-            <button
-              onClick={(e) => e.preventDefault()}
-              className="font-semibold px-1 py-2 flex items-center gap-x-2 hover:text-indigo-500 transition-all w-max"
-            >
+            <button className="font-semibold px-1 py-2 flex items-center gap-x-2 hover:text-indigo-500 transition-all w-max">
               <CiMail className="text-2xl" />
               <span className="text-lg">Send message</span>
             </button>

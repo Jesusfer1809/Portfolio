@@ -48,54 +48,34 @@ function Navbar() {
       </Link>
 
       <div className="flex items-center gap-6  md:gap-8 lg:gap-10 font-semibold text-sm md:text-base xl:text-lg">
-        <div className="lg:flex gap-2 items-center hidden ">
-          <ScrollLink
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-200}
-            duration={1500}
-          >
+        <Link href="/" passHref>
+          <div className="lg:flex gap-2 items-center hidden ">
             <span className="text-indigo-300">01.</span>
             <span className="border-b pb-1 border-transparent hover:border-indigo-400 hover:text-indigo-400 cursor-pointer transition-all">
-              Projects
+              Projects / About me
             </span>
-          </ScrollLink>
-        </div>
+          </div>
+        </Link>
 
-        <div className="lg:flex gap-2 items-center hidden ">
-          <ScrollLink
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-200}
-            duration={1500}
-          >
+        <Link href="/contact" passHref>
+          <div className="lg:flex gap-2 items-center hidden ">
             <span className="text-indigo-300">02.</span>
-            <span className="border-b pb-1 border-transparent hover:border-indigo-400 hover:text-indigo-400 cursor-pointer transition-all">
-              About me
-            </span>
-          </ScrollLink>
-        </div>
-
-        <div className="lg:flex gap-2 items-center hidden ">
-          <ScrollLink
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-200}
-            duration={1500}
-          >
-            <span className="text-indigo-300">03.</span>
             <span className="border-b pb-1 border-transparent hover:border-indigo-400 hover:text-indigo-400 cursor-pointer transition-all">
               Contact me
             </span>
-          </ScrollLink>
-        </div>
+          </div>
+        </Link>
 
         <div className="flex items-center  gap-2 md:items-center cursor-pointer px-3 py-1 bg-indigo-400 rounded-md hover:bg-indigo-500 transition-all">
           <AiOutlineFileText className="text-xl" />
-          <span className="hidden sz500:block">Resume</span>
+          <a
+            href="/Jesus_Rondon_Resume.pdf"
+            target="_blank"
+            download="/Jesus_Rondon_Resume.pdf"
+            className="hidden sz500:block"
+          >
+            Resume
+          </a>
         </div>
 
         <div onClick={openMenu} className="lg:hidden gap-2 items-center flex ">

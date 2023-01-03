@@ -6,6 +6,8 @@ import Loading from "components/pieces/Loading";
 import ContactForm from "components/pieces/ContactForm";
 import Footer from "components/sections/Footer";
 
+import { Toaster } from "react-hot-toast";
+
 import { useEffect, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
