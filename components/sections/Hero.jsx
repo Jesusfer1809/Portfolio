@@ -10,10 +10,27 @@ import {
 } from "react-icons/ai";
 import Link from "next/link";
 import { fadeVariant, staggerContainer } from "utils/anim";
+import Image from "next/image";
 
 function Hero() {
   return (
     <div className="h-screen relative flex flex-col  justify-center -mt-16 ">
+      <div
+        style={{
+          backgroundImage:
+            "linear-gradient(to left, transparent 0% , transparent 50%, rgba(30, 41, 59, 1) 100%  ), linear-gradient(to right, transparent 0% , transparent 70%, rgba(30, 41, 59, 1) 100%  ),linear-gradient(to bottom, transparent 0% , transparent 80%, rgba(30, 41, 59, 1) 100%  ), url('/developer_2.png')",
+        }}
+        className="w-1/2  absolute top-0 sm:right-0 md:-right-4 lg:-right-8 h-screen  bg-cover bg-center hidden sm:block "
+      ></div>
+
+      <div
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, transparent 0% , transparent 90%, rgba(30, 41, 59,1) 100%  ), linear-gradient(to bottom, transparent 0% , transparent 90%, rgba(30, 41, 59,1) 100%  ),linear-gradient(to bottom,rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.7)  ), url('/developer_2.png')",
+        }}
+        className="w-full  absolute top-0 -left-4 h-screen  bg-cover bg-center sm:hidden  "
+      ></div>
+
       <motion.div
         variants={staggerContainer(0.1, 0)}
         initial="hidden"
@@ -102,7 +119,7 @@ function Hero() {
         </div>
       </motion.div>
 
-      <div className="absolute hidden right-0 top-28 sm:flex gap-8">
+      <div className="absolute hidden right-0 md:-right-8 top-20 sm:flex gap-8">
         <Link href="https://github.com/Jesusfer1809">
           <a target="_blank">
             <AiOutlineGithub className="w-6 h-6 md:w-8 md:h-8  lg:w-10 lg:h-10  text-indigo-400 hover:text-indigo-600 transition-all" />
