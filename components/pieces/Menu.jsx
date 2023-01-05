@@ -87,7 +87,7 @@ function Menu({ isOpened, closeMenu }) {
             className="cursor-pointer flex gap-x-3 items-center"
           >
             <AiOutlineTwitter className="text-3xl" />
-            <span className="text-lg">.Twitter</span>
+            <span className="text-lg">Twitter</span>
           </motion.a>
         </Link>
       </motion.div>
