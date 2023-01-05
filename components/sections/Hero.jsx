@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef } from "react";
 import scrollStyles from "styles/scrollIcon.module.css";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -13,15 +13,27 @@ import { fadeVariant, staggerContainer } from "utils/anim";
 import Image from "next/image";
 
 function Hero() {
+  let ref = useRef(null);
+  let { scrollY } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  let y = useTransform(scrollY, [-100, 300], ["0%", "10%"]);
+
   return (
-    <div className="h-screen relative flex flex-col  justify-center -mt-16 ">
-      <div
+    <div
+      ref={ref}
+      className="h-screen relative flex flex-col  justify-center -mt-16 "
+    >
+      <motion.div
         style={{
+          y,
           backgroundImage:
             "linear-gradient(to left, transparent 0% , transparent 50%, rgba(30, 41, 59, 1) 100%  ), linear-gradient(to right, transparent 0% , transparent 70%, rgba(30, 41, 59, 1) 100%  ),linear-gradient(to bottom, transparent 0% , transparent 80%, rgba(30, 41, 59, 1) 100%  ), url('/developer_2.png')",
         }}
         className="w-1/2  absolute top-0 sm:right-0 md:-right-4 lg:-right-8 h-screen  bg-cover bg-center hidden sm:block "
-      ></div>
+      ></motion.div>
 
       <div
         style={{

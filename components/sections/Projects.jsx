@@ -7,7 +7,7 @@ import { projectsData } from "utils/projectsData";
 
 function Projects() {
   return (
-    <div className="pb-20 mt-44" id="projects">
+    <div className="pb-20 mt-44 sm:mt-56" id="projects">
       <motion.div
         variants={fadeVariant()}
         initial="hidden"
