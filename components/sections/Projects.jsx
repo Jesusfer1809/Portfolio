@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { animScrollProps, fadeVariant, staggerContainer } from "utils/anim";
+import { fadeVariant } from "utils/anim";
 import ProjectShowcase from "components/pieces/ProjectShowcase";
 import { projectsData } from "utils/projectsData";
 

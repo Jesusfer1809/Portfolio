@@ -2,14 +2,12 @@ import Head from "next/head";
 import Navbar from "components/sections/Navbar";
 import Hero from "components/sections/Hero";
 import Projects from "components/sections/Projects";
-import Loading from "components/pieces/Loading";
+
 import AboutComponent from "components/sections/AboutComponent";
 import ContactMe from "components/sections/ContactMe";
 import Footer from "components/sections/Footer";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Menu from "components/pieces/Menu";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (

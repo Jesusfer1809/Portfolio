@@ -8,7 +8,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { animScrollProps, fadeVariant } from "utils/anim";
+import { fadeVariant } from "utils/anim";
 
 function ProjectShowcase({ project, position }) {
   let ref = useRef(null);

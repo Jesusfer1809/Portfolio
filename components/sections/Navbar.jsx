@@ -6,7 +6,6 @@ import { AnimatePresence } from "framer-motion";
 import { AiOutlineFileText } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 
 function Navbar() {

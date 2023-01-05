@@ -10,7 +10,6 @@ import {
 } from "react-icons/ai";
 import Link from "next/link";
 import { fadeVariant, staggerContainer } from "utils/anim";
-import Image from "next/image";
 
 function Hero() {
   let ref = useRef(null);

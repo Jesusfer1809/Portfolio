@@ -1,16 +1,11 @@
-import axios from "axios";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "components/sections/Navbar";
-import Loading from "components/pieces/Loading";
+
 import ContactForm from "components/pieces/ContactForm";
 import Footer from "components/sections/Footer";
 
-import { Toaster } from "react-hot-toast";
-
-import { useEffect, useState } from "react";
-
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const MapWrapper = dynamic(() => import("components/pieces/MapWrapper"), {
   ssr: false,

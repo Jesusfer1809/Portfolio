@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { Toaster } from "react-hot-toast";
 

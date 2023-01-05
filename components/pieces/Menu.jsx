@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
-import HamburguerButton from "components/pieces/HamburguerButton";
-import LogoMenu from "components/pieces/LogoMenu";
 
 import { IoClose } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";

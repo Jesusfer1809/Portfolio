@@ -1,8 +1,7 @@
 import React from "react";
-import Accordion from "components/pieces/Accordion";
 
 import { motion } from "framer-motion";
-import { animScrollProps, fadeVariant, staggerContainer } from "utils/anim";
+import { fadeVariant, staggerContainer } from "utils/anim";
 
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { DiCss3, DiReact, DiSass } from "react-icons/di";
@@ -16,6 +15,7 @@ import {
   SiRedux,
   SiFirebase,
   SiStripe,
+  SiTypescript,
 } from "react-icons/si";
 
 import { RxGear, RxFramerLogo } from "react-icons/rx";
@@ -72,8 +72,8 @@ function AboutComponent() {
           <span className="text-sm xl:text-base font-medium ">CSS3</span>
         </div>
         <div className="flex flex-col items-center gap-y-2">
-          <IoLogoJavascript className="text-5xl xl:text-6xl text-slate-400" />
-          <span className="text-sm xl:text-base font-medium ">JavaScript</span>
+          <SiTypescript className="text-5xl xl:text-6xl text-slate-400" />
+          <span className="text-sm xl:text-base font-medium ">Typescript</span>
         </div>
         <div className="flex flex-col items-center gap-y-2">
           <DiReact className="text-5xl xl:text-6xl text-slate-400" />
