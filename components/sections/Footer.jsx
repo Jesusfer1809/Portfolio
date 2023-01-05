@@ -46,7 +46,7 @@ function Footer() {
           </h3>
           <div className=" text-lg font-medium mt-4 flex gap-x-8 gap-y-4 flex-col">
             <div>
-              <Link href="https://www.linkedin.com/in/jesus-rondon-963b1321a/">
+              <Link href="https://www.linkedin.com/in/jesus-rondon">
                 <a
                   target="_blank"
                   className="w-max hover:text-indigo-500 flex gap-x-4 items-center tracking-wide  cursor-pointer transition-all "

@@ -55,10 +55,7 @@ function Menu({ isOpened, closeMenu }) {
           </motion.div>
         </Link>
 
-        <Link
-          href="https://www.linkedin.com/in/jesus-rondon-963b1321a/"
-          passHref
-        >
+        <Link href="https://www.linkedin.com/in/jesus-rondon" passHref>
           <motion.a
             variants={fadeInLeftVariant()}
             target="_blank"

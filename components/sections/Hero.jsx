@@ -136,7 +136,7 @@ function Hero() {
             <AiOutlineGithub className="w-6 h-6 md:w-8 md:h-8  lg:w-10 lg:h-10  text-indigo-400 hover:text-indigo-600 transition-all" />
           </a>
         </Link>
-        <Link href="https://www.linkedin.com/in/jesus-rondon-963b1321a/">
+        <Link href="https://www.linkedin.com/in/jesus-rondon">
           <a target="_blank">
             <AiOutlineLinkedin className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-indigo-400 hover:text-indigo-600 transition-all" />
           </a>
