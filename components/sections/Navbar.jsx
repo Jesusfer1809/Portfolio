@@ -66,14 +66,14 @@ function Navbar() {
         </Link>
 
         <div className="flex items-center  gap-2 md:items-center cursor-pointer px-3 py-1 bg-indigo-400 rounded-md hover:bg-indigo-500 transition-all">
-          <AiOutlineFileText className="text-xl" />
           <a
             href="/Jesus_Rondon_Resume.pdf"
             target="_blank"
             download="/Jesus_Rondon_Resume.pdf"
-            className="hidden sz500:block"
+            className="flex gap-x-2"
           >
-            Resume
+            <AiOutlineFileText className="text-xl" />
+            <span className="hidden sz500:block">Resume</span>
           </a>
         </div>
 
